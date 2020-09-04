@@ -1,17 +1,25 @@
 $(document).ready(function(){
 
-    // var scheduleHour = $(".hour").attr("id");
+    var scheduleHourArray = $(".hour")
     // var scheduleTime = scheduleHour.slice(-2);
-    // var description = $(".description").val;
-    // var currentHour = moment().hour();
+    var description = $(".description").val;
+    var currentHour = moment().hour();
 
-    console.log($(".hour"))
+    console.log(scheduleHourArray)
 
-//     // display current day, date, and time
-//     $("#currentDay").text(moment().format("dddd, MMMM do YYYY, hh:mm A"))
+    for (var i; i < scheduleHourArray.length; i++) {
+        scheduleHour = (scheduleHourArray[i].id).slice(-2);
+        console.log (scheduleHour)
+    }
+    
+    // display current day, date, and time
 
-//     // function to class description blocks
-//     $(".hour")
+    $("#currentDay").text(moment().format("dddd, MMMM do YYYY, hh:mm A"))
+
+    // function to class description blocks
+    $(".hour").click(function(){
+        console.log(this.id)
+    })
 
 //     // check current time of day in hours to class description block
         
